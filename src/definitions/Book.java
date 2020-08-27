@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Objects;
+
 public class Book {
     // Components of a Definition Class in Java
     // 1. private fields
@@ -49,6 +51,21 @@ public class Book {
                 ", Book Author ='" + bookAuthor + '\'' +
                 ", Book ISBN Number ='" + bookIsbnNumber + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(getBookName(), book.getBookName()) &&
+                Objects.equals(getBookAuthor(), book.getBookAuthor()) &&
+                Objects.equals(getBookIsbnNumber(), book.getBookIsbnNumber());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getBookName(), getBookAuthor(), getBookIsbnNumber());
     }
 }
 
