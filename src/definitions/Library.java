@@ -24,7 +24,7 @@ public class Library {
     public Library() {
         this.books = new Book[5];
         for (int i = 0; i < books.length; i++) {
-            books[i] = new Book("Book " + (i + 1), "Book " + (i + 1), String.valueOf((int) 10000000000000L + i));
+            books[i] = new Book("Book " + (i + 1), "Book Author " + (i + 1), String.valueOf((int) 10000000000000L + i));
         }
 
     }
