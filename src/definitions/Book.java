@@ -9,16 +9,17 @@ package definitions;
 import java.util.Objects;
 
 public class Book {
-    // Components of a Book Class
-    // 1. private fields
-    // 2. public getters and setters
-    // 3. Constructors for initializing the fields
-    // 4. toString() method
-    // 5. equals() and hashCode() method
+
 
     private String bookName;
     private String bookAuthor;
     private String bookIsbnNumber;
+
+    public Book() {
+        this.bookName = "Harry Potter";
+        this.bookAuthor = "J.K. Rowling";
+        this.bookIsbnNumber = "8646314629841";
+    }
 
     public String getBookName() {
         return bookName;
