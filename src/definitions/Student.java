@@ -79,7 +79,11 @@ public class Student {
         return result;
     }
 
-    public void issueNewBook(String name) {
+    public void issueBook(String name) {
         System.out.println("\"" + name + "\" is now issued.");
+    }
+
+    public void doReturn(String name) {
+        System.out.println("Thank you for returning \"" + name + "\".");
     }
 }
