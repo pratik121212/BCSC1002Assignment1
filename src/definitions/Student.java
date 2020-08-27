@@ -7,7 +7,6 @@
 package definitions;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 public class Student {
@@ -15,7 +14,6 @@ public class Student {
     private long studentUniversityRollNumber;
     private int numberOfBooksIssuedByStudent;
     private Book[] booksIssued;
-    private List<Book> issuedBooksNew;
 
     public Student(String studentName, long studentUniversityRollNumber, int numberOfBooksIssuedByStudent) {
         this.studentName = studentName;
@@ -25,7 +23,6 @@ public class Student {
         for (int i = 0; i < booksIssued.length; i++) {
             booksIssued[i] = new Book("Book " + (i + 7), "Generic Author " + (i + 11), Long.toString(3200006000000L + (i + 12)));
         }
-        issuedBooksNew = Arrays.asList(booksIssued);
 
     }
 
@@ -88,16 +85,15 @@ public class Student {
 
     public void issueBook(String name) {
         System.out.println("\"" + name + "\" is now issued.");
-        issuedBooksNew.add(new Book(name));
+
     }
 
     public void doReturn(String name) {
         System.out.println("Thank you for returning \"" + name + "\".");
-        issuedBooksNew.remove(new Book(name));
     }
 
     public void showAllBooks() {
-        for (Book book : issuedBooksNew) {
+        for (Book book : this.booksIssued) {
             System.out.println(book);
         }
     }
