@@ -88,16 +88,16 @@ public class Student {
 
     public void issueBook(String name) {
         System.out.println("\"" + name + "\" is now issued.");
-        issuedBooksNew.add(new Book());
-
+        issuedBooksNew.add(new Book(name));
     }
 
     public void doReturn(String name) {
         System.out.println("Thank you for returning \"" + name + "\".");
+        issuedBooksNew.remove(new Book(name));
     }
 
     public void showAllBooks() {
-        for (Book book : this.booksIssued) {
+        for (Book book : issuedBooksNew) {
             System.out.println(book);
         }
     }
