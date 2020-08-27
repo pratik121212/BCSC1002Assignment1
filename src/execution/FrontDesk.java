@@ -9,6 +9,11 @@ package execution;
 import definitions.Student;
 
 public class FrontDesk {
+    private static int ISSUE_NEW_BOOK = 1;
+    private static int RETURN_BOOK = 2;
+    private static int SHOW_ALL_BOOKS = 3;
+    private static int EXIT = 4;
+
     public static void main(String[] args) {
         Student student = new Student();
 
