@@ -21,7 +21,7 @@ public class Student {
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
         this.booksIssued = new Book[numberOfBooksIssuedByStudent];
         for (int i = 0; i < booksIssued.length; i++) {
-            booksIssued[i] = new Book("Book " + (i + 5), "Book Author " + (i + 5), Long.toString(10000000001231L + i));
+            booksIssued[i] = new Book("Book " + (i + 7), "Book " + (i + 7), Long.toString(1000000000000L + (i + 12)));
         }
 
     }
@@ -54,8 +54,8 @@ public class Student {
         return booksIssued.clone();
     }
 
-    public void setBooksIssued(Book[] books) {
-        this.booksIssued = books;
+    public void setBooksIssued(Book[] booksIssued) {
+        this.booksIssued = booksIssued;
     }
 
     @Override

@@ -18,7 +18,7 @@ public class Book {
     public Book() {
         this.bookName = "Harry Potter";
         this.bookAuthor = "J.K. Rowling";
-        this.bookIsbnNumber = "10000000000000";
+        this.bookIsbnNumber = "1000000000000";
     }
 
     public Book(String bookName, String bookAuthor, String bookIsbnNumber) {
