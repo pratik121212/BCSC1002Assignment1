@@ -20,7 +20,7 @@ public class Student {
     private String studentName;
     private long studentUniversityRollNumber;
     private int numberOfBooksIssuedByStudent;
-    private Book[] books;
+    private Book[] booksIssued;
 
     public String getStudentName() {
         return studentName;
@@ -46,19 +46,19 @@ public class Student {
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
     }
 
-    public Book[] getBooks() {
-        return books.clone();
+    public Book[] getBooksIssued() {
+        return booksIssued.clone();
     }
 
-    public void setBooks(Book[] books) {
-        this.books = books;
+    public void setBooksIssued(Book[] books) {
+        this.booksIssued = books;
     }
 
     @Override
     public String toString() {
         return String.format("Student name: %s, Student's University Roll no.: %d, Number of books issued by Student: %d, Books: %s",
                 getStudentName(), getStudentUniversityRollNumber(), getNumberOfBooksIssuedByStudent(),
-                Arrays.toString(books));
+                Arrays.toString(booksIssued));
     }
 
     @Override
@@ -69,13 +69,13 @@ public class Student {
         return getStudentUniversityRollNumber() == student.getStudentUniversityRollNumber() &&
                 getNumberOfBooksIssuedByStudent() == student.getNumberOfBooksIssuedByStudent() &&
                 getStudentName().equals(student.getStudentName()) &&
-                Arrays.equals(getBooks(), student.getBooks());
+                Arrays.equals(getBooksIssued(), student.getBooksIssued());
     }
 
     @Override
     public int hashCode() {
         int result = Objects.hash(getStudentName(), getStudentUniversityRollNumber(), getNumberOfBooksIssuedByStudent());
-        result = 31 * result + Arrays.hashCode(getBooks());
+        result = 31 * result + Arrays.hashCode(getBooksIssued());
         return result;
     }
 }
