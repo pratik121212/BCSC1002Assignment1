@@ -8,6 +8,8 @@ package execution;
 
 import definitions.Student;
 
+import java.util.Scanner;
+
 public class FrontDesk {
     private static int ISSUE_NEW_BOOK = 1;
     private static int RETURN_BOOK = 2;
@@ -15,6 +17,7 @@ public class FrontDesk {
     private static int EXIT = 4;
 
     public static void main(String[] args) {
+        Scanner scannerObject = new Scanner(System.in);
         Student student = new Student();
 
 
