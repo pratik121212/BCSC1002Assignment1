@@ -24,4 +24,16 @@ public class Library {
         return String.format("Books in Library: %s", Arrays.toString(book));
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Library library = (Library) o;
+        return Arrays.equals(getBook(), library.getBook());
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(getBook());
+    }
 }
