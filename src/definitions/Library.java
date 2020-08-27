@@ -7,4 +7,7 @@
 package definitions;
 
 public class Library {
+    private String[] book;
+
+
 }

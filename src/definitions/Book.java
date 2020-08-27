@@ -46,11 +46,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "Book Name ='" + bookName + '\'' +
-                ", Book Author ='" + bookAuthor + '\'' +
-                ", Book ISBN Number ='" + bookIsbnNumber + '\'' +
-                '}';
+        return String.format("Book name: %s, Book Author: %s, ISBN number of Book: %s",
+                getBookName(), getBookAuthor(), getBookIsbnNumber());
     }
 
     @Override
