@@ -9,12 +9,7 @@ package definitions;
 import java.util.Arrays;
 
 public class Library {
-    // Components of Library Class
-    // 1. private fields
-    // 2. public getters and setters
-    // 3. Constructors for initializing the fields
-    // 4. toString() method
-    // 5. equals() and hashCode() method
+
 
     private Book[] books;
 
@@ -24,6 +19,14 @@ public class Library {
 
     public void setBooks(Book[] books) {
         this.books = books;
+    }
+
+    public Library() {
+        this.books = new Book[5];
+        for (int i = 0; i < books.length; i++) {
+            books[i] = new Book("Book " + (i + 1), "Book " + (i + 1), String.valueOf((int) 10000000000000L + i));
+        }
+
     }
 
     @Override
