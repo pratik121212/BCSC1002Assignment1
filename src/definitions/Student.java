@@ -78,4 +78,8 @@ public class Student {
         result = 31 * result + Arrays.hashCode(getBooksIssued());
         return result;
     }
+
+    public void issueNewBook(String name) {
+        System.out.println("\"" + name + "\" is now issued.");
+    }
 }
