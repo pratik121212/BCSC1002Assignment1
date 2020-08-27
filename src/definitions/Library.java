@@ -9,6 +9,13 @@ package definitions;
 import java.util.Arrays;
 
 public class Library {
+    // Components of Library Class
+    // 1. private fields
+    // 2. public getters and setters
+    // 3. Constructors for initializing the fields
+    // 4. toString() method
+    // 5. equals() and hashCode() method
+
     private String[] book;
 
     public String[] getBook() {

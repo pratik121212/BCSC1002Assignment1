@@ -10,6 +10,13 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
+    // Components of Student Class
+    // 1. private fields
+    // 2. public getters and setters
+    // 3. Constructors for initializing the fields
+    // 4. toString() method
+    // 5. equals() and hashCode() method
+
     private String studentName;
     private long studentUniversityRollNumber;
     private int numberOfBooksIssuedByStudent;

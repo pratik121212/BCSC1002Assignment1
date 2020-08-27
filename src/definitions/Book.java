@@ -9,7 +9,7 @@ package definitions;
 import java.util.Objects;
 
 public class Book {
-    // Components of a Definition Class in Java
+    // Components of a Book Class
     // 1. private fields
     // 2. public getters and setters
     // 3. Constructors for initializing the fields
