@@ -19,7 +19,7 @@ public class Library {
     private String[] book;
 
     public String[] getBook() {
-        return book;
+        return book.clone();
     }
 
     public void setBook(String[] book) {
