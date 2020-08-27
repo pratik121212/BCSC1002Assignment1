@@ -10,17 +10,21 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
-    // Components of Student Class
-    // 1. private fields
-    // 2. public getters and setters
-    // 3. Constructors for initializing the fields
-    // 4. toString() method
-    // 5. equals() and hashCode() method
-
     private String studentName;
     private long studentUniversityRollNumber;
     private int numberOfBooksIssuedByStudent;
     private Book[] booksIssued;
+
+    public Student(String studentName, long studentUniversityRollNumber, int numberOfBooksIssuedByStudent) {
+        this.studentName = studentName;
+        this.studentUniversityRollNumber = studentUniversityRollNumber;
+        this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
+        this.booksIssued = new Book[numberOfBooksIssuedByStudent];
+        for (int i = 0; i < booksIssued.length; i++) {
+            booksIssued[i] = new Book("Book " + (i + 5), "Book Author " + (i + 5), Long.toString(10000000001231L + i));
+        }
+
+    }
 
     public String getStudentName() {
         return studentName;

@@ -18,7 +18,7 @@ public class FrontDesk {
 
     public static void main(String[] args) {
         Scanner scannerObject = new Scanner(System.in);
-        Student student = new Student();
+        Student student = new Student("Pratik Sharma", 191500593L, 7);
         String bookName;
         int studentInput;
         do {
