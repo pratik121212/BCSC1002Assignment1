@@ -50,8 +50,8 @@ public class Student {
         return books.clone();
     }
 
-    public void setBooks(String[] book) {
-        this.books = books.clone();
+    public void setBooks(Book[] books) {
+        this.books = books;
     }
 
     @Override
