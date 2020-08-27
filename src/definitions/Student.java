@@ -21,7 +21,7 @@ public class Student {
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
         this.booksIssued = new Book[numberOfBooksIssuedByStudent];
         for (int i = 0; i < booksIssued.length; i++) {
-            booksIssued[i] = new Book("Book " + (i + 7), "Book " + (i + 7), Long.toString(1000000000000L + (i + 12)));
+            booksIssued[i] = new Book("Book " + (i + 7), "Generic Author " + (i + 11), Long.toString(3200006000000L + (i + 12)));
         }
 
     }
