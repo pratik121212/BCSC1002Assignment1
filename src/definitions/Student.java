@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Student {
     private String studentName;
     private long studentUniversityRollNumber;
@@ -41,7 +43,13 @@ public class Student {
     }
 
     public void setBook(String[] book) {
-        this.book = book;
+        this.book = book.clone();
     }
 
+    @Override
+    public String toString() {
+        return String.format("Student name: %s, Student's University Roll no.: %d, Number of books issued by Student: %d, Books: %s",
+                getStudentName(), getStudentUniversityRollNumber(), getNumberOfBooksIssuedByStudent(),
+                Arrays.toString(book));
+    }
 }
