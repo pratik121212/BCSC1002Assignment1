@@ -16,19 +16,19 @@ public class Library {
     // 4. toString() method
     // 5. equals() and hashCode() method
 
-    private String[] book;
+    private Book[] books;
 
-    public String[] getBook() {
-        return book.clone();
+    public Book[] getBooks() {
+        return books.clone();
     }
 
-    public void setBook(String[] book) {
-        this.book = book;
+    public void setBooks(Book[] books) {
+        this.books = books;
     }
 
     @Override
     public String toString() {
-        return String.format("Books in Library: %s", Arrays.toString(book));
+        return String.format("Books in Library: %s", Arrays.toString(books));
     }
 
     @Override
@@ -36,11 +36,11 @@ public class Library {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Library library = (Library) o;
-        return Arrays.equals(getBook(), library.getBook());
+        return Arrays.equals(getBooks(), library.getBooks());
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(getBook());
+        return Arrays.hashCode(getBooks());
     }
 }
