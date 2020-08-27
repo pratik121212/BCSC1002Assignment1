@@ -86,4 +86,10 @@ public class Student {
     public void doReturn(String name) {
         System.out.println("Thank you for returning \"" + name + "\".");
     }
+
+    public void showAllBooks() {
+        for (Book book : this.booksIssued) {
+            System.out.println(book);
+        }
+    }
 }
