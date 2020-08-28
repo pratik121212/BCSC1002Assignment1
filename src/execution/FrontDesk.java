@@ -22,7 +22,7 @@ public class FrontDesk {
         String bookName;
         int studentInput;
         do {
-            System.out.println("-=-=--=-=- Welcome to the Front Desk -=-=--=-=-");
+            System.out.println("-=-=--=-=-" + "\"" + "Welcome to the Front Desk" + "\"" + "-=-=--=-=-");
             System.out.println("How may I help you today?");
             System.out.println("1. Issue a new book for me.");
             System.out.println("2. Return a previously issued book for me.");
