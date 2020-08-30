@@ -20,11 +20,12 @@ public class Student {
         this.studentUniversityRollNumber = studentUniversityRollNumber;
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
         this.booksIssued = new Book[numberOfBooksIssuedByStudent];
+
         for (int i = 0; i < booksIssued.length; i++) {
             booksIssued[i] = new Book("Book " + (i + 7), "Generic Author " + (i + 11), Long.toString(3200006000000L + (i + 12)));
         }
-
     }
+
 
     public String getStudentName() {
         return studentName;
@@ -84,6 +85,8 @@ public class Student {
     }
 
     public void issueBook(String name) {
+
+
         System.out.println("\"" + name + "\" is now issued.");
 
     }
