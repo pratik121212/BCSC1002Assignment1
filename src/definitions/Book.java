@@ -21,6 +21,8 @@ public class Book {
     private String bookAuthor;
     private String bookIsbnNumber;
 
+    // Constructors to initialize the Book object.
+
     public Book() {
         this.bookName = "Harry Potter";
         this.bookAuthor = "J.K. Rowling";
@@ -63,20 +65,38 @@ public class Book {
         this.bookIsbnNumber = bookIsbnNumber;
     }
 
+    /**
+     * This method will allow the student to issue a book.
+     */
     public void issueBook() {
         System.out.println("Thank you for issuing.");
     }
 
+    /**
+     * This method will allow the student to return a previously issued book.
+     */
     public void doReturn() {
         System.out.println("Thank You for returning.");
     }
 
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return a string representation of the object.
+     */
     @Override
     public String toString() {
         return String.format("Book name: %s, Book Author: %s, ISBN number of Book: %s",
                 getBookName(), getBookAuthor(), getBookIsbnNumber());
     }
 
+    /**
+     * Indicates whether some other object is "equal to" this one.
+     *
+     * @param o the reference object with which to compare.
+     * @return {@code true} if this object is the same as the obj
+     * argument; {@code false} otherwise.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -86,6 +106,12 @@ public class Book {
                 Objects.equals(getBookAuthor(), book.getBookAuthor()) &&
                 Objects.equals(getBookIsbnNumber(), book.getBookIsbnNumber());
     }
+
+    /**
+     * Returns a hash code value for the object.
+     *
+     * @return a hash code value for this object.
+     */
 
     @Override
     public int hashCode() {
