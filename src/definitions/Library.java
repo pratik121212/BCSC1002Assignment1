@@ -1,7 +1,7 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:50 PM
+ *  User: Pratik Sharma (pratik1212122)
+ *  Date: 30/08/20
+ *  Time: 5:53 PM
  *  File Name : Library.java
  * */
 package definitions;
@@ -28,6 +28,7 @@ public class Library {
         }
 
     }
+    // These 'special' methods are already discussed before.
 
     @Override
     public String toString() {
