@@ -84,7 +84,7 @@ public class Student {
         return result;
     }
 
-    /*
+    /**
      * This method will allow the student to issue the book.
      *  @param name The name of the book which the student wants to issue.
      */
@@ -95,7 +95,7 @@ public class Student {
 
     }
 
-    /*
+    /**
      * This method will allow the student to return a previously issued  book.
      *  @param name The name of the book which the student wants to return.
      */
@@ -103,7 +103,7 @@ public class Student {
         System.out.println("Thank you for returning \"" + name + "\".");
     }
 
-    /*
+    /**
      * This method will allow the student to show all his/her issued books.
      */
 
