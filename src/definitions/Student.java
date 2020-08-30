@@ -1,7 +1,7 @@
 /*  Created by IntelliJ IDEA.
- *  User: Divyansh Bhardwaj (dbc2201)
- *  Date: 21/08/20
- *  Time: 3:49 PM
+ *  User: Pratik Sharma (pratik121212)
+ *  Date: 30/08/20
+ *  Time: 5:22 PM
  *  File Name : Student.java
  * */
 package definitions;
@@ -20,6 +20,9 @@ public class Student {
         this.studentUniversityRollNumber = studentUniversityRollNumber;
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
         this.booksIssued = new Book[numberOfBooksIssuedByStudent];
+        // { null, null, ..... }
+        // since every element is a Book object
+        // { new Book(), new Book(), ........ }
 
         for (int i = 0; i < booksIssued.length; i++) {
             booksIssued[i] = new Book("Book " + (i + 7), "Generic Author " + (i + 11), Long.toString(3200006000000L + (i + 12)));
@@ -86,17 +89,16 @@ public class Student {
 
     /**
      * This method will allow the student to issue the book.
+     *
      *  @param name The name of the book which the student wants to issue.
      */
     public void issueBook(String name) {
-
-
         System.out.println("\"" + name + "\" is now issued.");
-
     }
 
     /**
      * This method will allow the student to return a previously issued  book.
+     *
      *  @param name The name of the book which the student wants to return.
      */
     public void doReturn(String name) {
