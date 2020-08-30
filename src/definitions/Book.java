@@ -9,6 +9,12 @@ package definitions;
 import java.util.Objects;
 
 public class Book {
+    // Components of a Definition Class in Java
+    // 1. private fields
+    // 2. public getters & setters
+    // 3. Constructors for initializing the fields.
+    // 4. toString() method
+    // 5. equals() and hashCode() method
 
 
     private String bookName;
@@ -55,6 +61,14 @@ public class Book {
 
     public void setBookIsbnNumber(String bookIsbnNumber) {
         this.bookIsbnNumber = bookIsbnNumber;
+    }
+
+    public void issueBook() {
+        System.out.println("Thank you for issuing.");
+    }
+
+    public void doReturn() {
+        System.out.println("Thank You for returning.");
     }
 
     @Override
