@@ -27,6 +27,7 @@ public class Library {
 
     public Library(int numberOfBooksIssuedByStudent) {
         this.books = new Book[50];
+        this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
         for (int i = 0; i < books.length; i++) {
             books[i] = new Book("Book " + (i + 1), "Book Author " + (i + 1), Long.toString(1000000000000L + i));
         }
