@@ -59,7 +59,7 @@ public class Library {
 
     @Override
     public String toString() {
-        return String.format("Books in Library: %s", Arrays.toString(books));
+        return String.format("Books in Library: %s \nBooks issued by student: %s", Arrays.toString(books), Arrays.toString(booksIssued));
     }
 
     @Override
@@ -75,7 +75,6 @@ public class Library {
         return Arrays.hashCode(getBooks());
     }
 
-}
 
     /**
      * This method will allow the student to issue the book.
@@ -104,5 +103,4 @@ public class Library {
             System.out.println(book);
         }
     }
-}
 }
