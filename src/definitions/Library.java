@@ -8,6 +8,7 @@
 package definitions;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Library {
 
@@ -67,14 +68,18 @@ public class Library {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Library library = (Library) o;
-        return Arrays.equals(getBooks(), library.getBooks());
+        return getNumberOfBooksIssuedByStudent() == library.getNumberOfBooksIssuedByStudent() &&
+                Arrays.equals(getBooks(), library.getBooks()) &&
+                Arrays.equals(getBooksIssued(), library.getBooksIssued());
     }
 
     @Override
     public int hashCode() {
-        return Arrays.hashCode(getBooks());
+        int result = Objects.hash(getNumberOfBooksIssuedByStudent());
+        result = 31 * result + Arrays.hashCode(getBooks());
+        result = 31 * result + Arrays.hashCode(getBooksIssued());
+        return result;
     }
-
 
     /**
      * This method will allow the student to issue the book.
