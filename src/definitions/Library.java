@@ -104,7 +104,6 @@ public class Library {
     /**
      * This method will allow the student to show all his/her issued books.
      */
-
     public void showAllBooks() {
         for (Book book : this.booksIssued) {
             System.out.println(book);

@@ -7,13 +7,11 @@
 
 package definitions;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Student {
     private String studentName;
     private long studentUniversityRollNumber;
-    private Book[] booksIssued;
     private int numberOfBooksIssuedByStudent;
 
 
@@ -49,19 +47,12 @@ public class Student {
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
     }
 
-    public Book[] getBooksIssued() {
-        return booksIssued.clone();
-    }
-
-    public void setBooksIssued(Book[] booksIssued) {
-        this.booksIssued = booksIssued;
-    }
 
     @Override
     public String toString() {
-        return String.format("Student name: %s, Student's University Roll no.: %d, Number of books issued by Student: %d, Books: %s",
-                getStudentName(), getStudentUniversityRollNumber(), getNumberOfBooksIssuedByStudent(),
-                Arrays.toString(booksIssued));
+        return String.format("Student name: %s, Student's University Roll number: %d, Number of books issued: %d",
+                getStudentName(), getStudentUniversityRollNumber(), getNumberOfBooksIssuedByStudent());
+
     }
 
     @Override
@@ -71,15 +62,11 @@ public class Student {
         Student student = (Student) o;
         return getStudentUniversityRollNumber() == student.getStudentUniversityRollNumber() &&
                 getNumberOfBooksIssuedByStudent() == student.getNumberOfBooksIssuedByStudent() &&
-                getStudentName().equals(student.getStudentName()) &&
-                Arrays.equals(getBooksIssued(), student.getBooksIssued());
+                getStudentName().equals(student.getStudentName());
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(getStudentName(), getStudentUniversityRollNumber(), getNumberOfBooksIssuedByStudent());
-        result = 31 * result + Arrays.hashCode(getBooksIssued());
-        return result;
+        return Objects.hash(getStudentName(), getStudentUniversityRollNumber(), getNumberOfBooksIssuedByStudent());
     }
-
 }
