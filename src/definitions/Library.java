@@ -61,7 +61,8 @@ public class Library {
 
     @Override
     public String toString() {
-        return String.format("Books in Library: %s \nBooks issued by student: %s", Arrays.toString(books), Arrays.toString(booksIssued));
+        return String.format("Books in Library: %s \nBooks issued by student: %s\nNumber of books issued by student: %d",
+                Arrays.toString(books), Arrays.toString(booksIssued), getNumberOfBooksIssuedByStudent());
     }
 
     @Override
