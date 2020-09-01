@@ -29,7 +29,7 @@ public class Library {
         this.books = new Book[50];
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
         for (int i = 0; i < books.length; i++) {
-            books[i] = new Book("Book " + (i + 1), "Book Author " + (i + 1), Long.toString(1000000000000L + i));
+            books[i] = new Book("Book " + (i + 1), "Book Author " + (i + 1), Long.toString(9845158362734L + i));
         }
         this.booksIssued = new Book[numberOfBooksIssuedByStudent];
         // { null, null, ..... }
@@ -37,7 +37,7 @@ public class Library {
         // { new Book(), new Book(), ........ }
 
         for (int i = 0; i < booksIssued.length; i++) {
-            booksIssued[i] = new Book("Book " + (i + 7), "Generic Author " + (i + 11), Long.toString(3200006000000L + (i + 12)));
+            booksIssued[i] = new Book("Book " + (i + 7), "Generic Author " + (i + 11), Long.toString(9763890725163L + (i + 12)));
         }
 
     }
