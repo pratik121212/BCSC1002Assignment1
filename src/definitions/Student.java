@@ -13,21 +13,15 @@ import java.util.Objects;
 public class Student {
     private String studentName;
     private long studentUniversityRollNumber;
-    private int numberOfBooksIssuedByStudent;
     private Book[] booksIssued;
+    private int numberOfBooksIssuedByStudent;
+
 
     public Student(String studentName, long studentUniversityRollNumber, int numberOfBooksIssuedByStudent) {
         this.studentName = studentName;
         this.studentUniversityRollNumber = studentUniversityRollNumber;
         this.numberOfBooksIssuedByStudent = numberOfBooksIssuedByStudent;
-        this.booksIssued = new Book[numberOfBooksIssuedByStudent];
-        // { null, null, ..... }
-        // since every element is a Book object
-        // { new Book(), new Book(), ........ }
 
-        for (int i = 0; i < booksIssued.length; i++) {
-            booksIssued[i] = new Book("Book " + (i + 7), "Generic Author " + (i + 11), Long.toString(3200006000000L + (i + 12)));
-        }
     }
 
 
@@ -88,31 +82,4 @@ public class Student {
         return result;
     }
 
-    /**
-     * This method will allow the student to issue the book.
-     *
-     *  @param name The name of the book which the student wants to issue.
-     */
-    public void issueBook(String name) {
-        System.out.println("\"" + name + "\" is now issued.");
-    }
-
-    /**
-     * This method will allow the student to return a previously issued  book.
-     *
-     *  @param name The name of the book which the student wants to return.
-     */
-    public void doReturn(String name) {
-        System.out.println("Thank you for returning \"" + name + "\".");
-    }
-
-    /**
-     * This method will allow the student to show all his/her issued books.
-     */
-
-    public void showAllBooks() {
-        for (Book book : this.booksIssued) {
-            System.out.println(book);
-        }
-    }
 }

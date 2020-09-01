@@ -36,16 +36,16 @@ public class FrontDesk {
                     System.out.println("Enter the name of book you want to issue: ");
                     scannerObject.nextLine();
                     bookName = scannerObject.nextLine();
-                    student.issueBook(bookName);
+                    .doIssueBook(bookName);
                     break;
                 case RETURN_BOOK:
                     System.out.println("Enter the name of the book you want to return: ");
                     scannerObject.nextLine();
                     bookName = scannerObject.nextLine();
-                    student.doReturn(bookName);
+                    library.doReturn(bookName);
                     break;
                 case SHOW_ALL_BOOKS:
-                    student.showAllBooks();
+                    library.showAllBooks();
                     break;
                 default:
                     break;
