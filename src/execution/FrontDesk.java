@@ -20,8 +20,14 @@ public class FrontDesk {
 
     public static void main(String[] args) {
         Scanner scannerObject = new Scanner(System.in);
-        Student student = new Student("Pratik Sharma", 191500593L, 6);
-        Library library = new Library(6);
+        System.out.println("Enter your full name: ");
+        String studentName = scannerObject.nextLine();
+        System.out.println("Enter your University Roll number: ");
+        long studentUniversityRollNumber = scannerObject.nextLong();
+        System.out.println("Enter the number of books issued by you: ");
+        int numberOfBooksIssuedBtStudent = scannerObject.nextInt();
+        Student student = new Student(studentName, studentUniversityRollNumber, numberOfBooksIssuedBtStudent);
+        Library library = new Library(numberOfBooksIssuedBtStudent);
         String bookName;
         int studentInput;
         do {
