@@ -27,7 +27,7 @@ public class FrontDesk {
         System.out.println("Enter the number of books issued by you: ");
         int numberOfBooksIssuedBtStudent = scannerObject.nextInt();
         Student student = new Student(studentName, studentUniversityRollNumber, numberOfBooksIssuedBtStudent);
-        Library library = new Library(numberOfBooksIssuedBtStudent);
+        Library library = new Library(student.getNumberOfBooksIssuedByStudent());
         String bookName;
         int studentInput;
         do {
